@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    direction: rtl;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* الهيدر */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1909f5;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left img.profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border:3px solid #0cf53e
+}
+
+.header-right nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header-right nav ul li a {
+    text-decoration: none;
+    color: #f8fdfa;
+    font-weight: bold;
+}
+
+.header-right nav ul li a:hover {
+    color: #ffcc00;
+}
+.social-fixed {
+    position: fixed;       /* يبقى مثبت عند التمرير */
+    left: 0;               /* الجانب الأيسر */
+    top: 70%;              /* منتصف الصفحة عموديًا */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column; /* ترتيب عمودي */
+    gap: 15px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.social-fixed a {
+    color: #00bfff;
+    font-size: 1.5rem;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.social-fixed a:hover {
+    background: #222;
+    color: #ffd700;
+}
+
+/* الأقسام */
+section {
+    padding: 60px 20px;
+}
+
+.home-section {
+    text-align: center;
+    background: #e0f7fa;
+}
+
+.home-section h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #2ad8fa;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffcc00;
+    color: #222;
+}
+
+/* عني */
+.about-section h2, .projects-section h2, .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+color:#1e3a8a;
+text-indent: 40px;
+}
+
+.about-section p {
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* المشاريع */
+.projects-section ul {
+    list-style-type: square;
+    padding-left: 20px;
+    text-indent: 40px;
+}
+
+/* تواصل بي */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-section input, .contact-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    padding: 10px;
+    border: none;
+    background-color: #222;
+    color: #f3f5f9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #ffcc00;
+    color: #f7f8fc;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+}

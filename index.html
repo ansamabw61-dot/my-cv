@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرتي الذاتية</title>
+
+    <!-- Font Awesome لأيقونات الشبكات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ملف CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- الهيدر -->
+    <header class="header">
+        <div class="header-left">
+            <img src="mymages.jpg" alt="صورة شخصية" class="profile">
+        </div>
+        <div class="header-right">
+            <nav>
+                <ul>
+                    <li><a href="#home">الصفحة الرئيسية</a></li>
+                    <li><a href="#about">عني</a></li>
+                    <li><a href="#projects">مشاريعي</a></li>
+                    <li><a href="#contact">تواصل بي</a></li>
+                </ul>
+                
+            </nav>
+        <!-- ازرار الشبكات الاجتماعية--> 
+            <div class="social-fixed">
+                <a href="https://www.facebook.com/mohammed.alsbry?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/mohammed.alsbry?igsh=cXJ4YWJucjMweHlz" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:ansamabw61 @gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/ansamabw61-dot" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </header>
+
+</div>    
+
+
+
+    <!-- رسالة ترحيبية وزر تحميل السيرة الذاتية -->
+    <section id="home" class="home-section">
+        <h1>مرحبًا؛ انا محمد عبدالرقيب الصبري</h1>
+        <p>     طالب تقنية معلومات؛ مصمم ويب؛شغوف بأبتكار تجارب رقمية جذابة وفعٌالة.أحب تحويل الأفكار إلى واجهات مستخدم مبتكرة؛واسعى دائمًا لتطوبر مهارتي في البرمجة والتصميم لتحقيق مشاريع عملية تضيف قيمة. </p>
+        <a href="resume.pdf" download class="btn">تحميل السيرة الذاتية</a>
+        <button onclick="scrollDown()" class="btn scroll-btn">⬇</button>
+    </section>
+
+    <!-- عني -->
+    <section id="about" class="about-section">
+        <h2>عني</h2>
+        <p>طالب تقنية معلومات؛ مطورومصمم ويب، أحب إنشاء المشاريع وتطوير مهاراتي باستمرار. لدي شغف بالتقنية وتصميم واجهات المستخدم.</p>
+        <h3>المهارات:</h3>
+        <ul>
+            <li>HTML </li>
+                <li>css</li>
+                <li>JavaScript</li>
+            <li>React (اختياري)</li>
+            <li>PHP / MySQL</li>
+            <li>تصميم واجهات المستخدم UI/UX</li>
+        </ul>
+    </section>
+
+    <!-- المشاريع -->
+    <section id="projects" class="projects-section">
+        <h2>مشاريعي</h2>
+        <ul>
+            <li>موقع مولد نصوص ادبية خاصة بي</li>
+            <li>موقع حجز عيادة  </li>
+            
+        </ul>
+    </section>
+
+    <!-- تواصل بي -->
+    <section id="contact" class="contact-section">
+        <h2>تواصل بي</h2>
+        <form>
+            <input type="text" name="name" placeholder="اسمك" required>
+            <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+            <textarea name="message" placeholder="رسالتك" required></textarea>
+            <button class="send-btn" onclick="window.location.href='mailto:ansamabw61@gmail.com?subject=رسالة من موقعك&body=مرحبا، أود التواصل معك.'">
+  إرسال
+</button>
+        </form>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>© 2025 محمد عبدالرقيب الصبري. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- ملف JavaScript -->
+    <script>
+        // smooth scroll للروابط داخل الصفحة
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        // زر النزول للأسفل
+        function scrollDown() {
+            document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
