@@ -94,13 +94,40 @@ section {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
-    background: #2ad8fa;
+    background: #08d2f6;
     color: #000;
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
+
+.scroll-btn{
+  animation: bounce 1.5s infinite;
+margin: 10px;
+padding: 30px 20px;
+background:linear-gradient(90deg,#00aaff,#0066ff);
+transition: 0.4;
+color: #000;
+border-radius: 10px;
+text-decoration: none;
+position: relative;
+top: 120px;
+left: 120px;
+}
+
+
+
+  
+/* حركة النزول */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+
+}
+
+
 
 .btn:hover {
     background: #ffcc00;
@@ -113,11 +140,13 @@ section {
     margin-bottom: 20px;
     font-weight: bold;
 color:#1e3a8a;
-text-indent: 40px;
+text-indent: 20px;
+margin-top: 150px;
+
 }
 
 .about-section p {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .about-section ul {
@@ -126,12 +155,31 @@ text-indent: 40px;
 }
 
 /* المشاريع */
-.projects-section ul {
-    list-style-type: square;
+.projects-section {
+    font-size: 16px;
+    font-weight: 500px;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.5;
     padding-left: 20px;
     text-indent: 40px;
-}
 
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+@media(max-width:600px){
+    .projects-section{
+        font-size: 14px;
+    }
+    .project-imag{
+        max-width: 100%;
+    }
+}
 /* تواصل بي */
 .contact-section form {
     display: flex;

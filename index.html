@@ -46,7 +46,7 @@
         <h1>مرحبًا؛ انا محمد عبدالرقيب الصبري</h1>
         <p>     طالب تقنية معلومات؛ مصمم ويب؛شغوف بأبتكار تجارب رقمية جذابة وفعٌالة.أحب تحويل الأفكار إلى واجهات مستخدم مبتكرة؛واسعى دائمًا لتطوبر مهارتي في البرمجة والتصميم لتحقيق مشاريع عملية تضيف قيمة. </p>
         <a href="cv_ mohammed.pdf" download class="btn">تحميل السيرة الذاتية</a>
-        <button onclick="scrollDown()" class="btn scroll-btn">⬇</button>
+        <button onclick="scrollDown()" class="scroll-btn">⬇</button>
     </section>
 
     <!-- عني -->
@@ -65,13 +65,10 @@
     </section>
 
     <!-- المشاريع -->
-    <section id="projects" class="projects-section">
+    <section class="projects-section">
         <h2>مشاريعي</h2>
-        <ul>
-            <li>موقع مولد نصوص ادبية خاصة بي</li>
-            <li>موقع حجز عيادة  </li>
-            
-        </ul>
+        <p>فيما يلي بعض المشاريع التي أنشاتها اثناء رحلتي التعليمة لإضهار مهاراتي وافكاري</p>
+            <img src="imag_project.png" alt="صورة مشروعي السابق" class="project-image">
     </section>
 
     <!-- تواصل بي -->
@@ -108,6 +105,12 @@
         function scrollDown() {
             document.getElementById("about").scrollIntoView({ behavior: "smooth" });
         }
+        function scrollDown() {
+  window.scrollBy({
+    top: 600,
+    behavior: 'smooth'
+  });
+}
     </script>
 </body>
 </html>
