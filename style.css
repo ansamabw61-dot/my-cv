@@ -203,9 +203,24 @@ position: relative;
 top: 120px;
 left: 120px;
 }
+@media (max-width: 600px) {
+    .header {
+        padding: 20px;
+        justify-content: center;
+    }
 
+    .header-left img.profile {
+        position: static;
+        margin: 0 auto 15px auto;
+        display: block;
+    }
 
-
+    .scroll-btn {
+        position: static;
+        margin: 20px auto 0 auto;
+        display: inline-block;
+    }
+}
   
 /* حركة النزول */
 @keyframes bounce {
