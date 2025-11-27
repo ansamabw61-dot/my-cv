@@ -120,9 +120,17 @@
         navMenu.classList.toggle('active');
         hamburgerButton.classList.toggle('active');
     });
-
+    // إغلاق القائمة عند الضغط على أي رابط داخلها
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburgerButton.classList.remove('active');
+        });
+    });
 
 
     </script>
+
 </body>
 </html>

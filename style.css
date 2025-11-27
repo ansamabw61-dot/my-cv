@@ -29,6 +29,9 @@ header,nav,section,footer{
     max-width: 100%;
     width: 100%;
 }
+.navbar{
+    position: relative; /* حتى تتموضع القائمة بالنسبة للنافبار */
+}
 @media(max-width:600px){
 body{
     font-size: 15px;
@@ -47,7 +50,7 @@ font-size: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 70px;
     background-color: #1909f5;
     color: #fff;
     position: sticky;
@@ -56,13 +59,13 @@ font-size: 16px;
 }
 
 .header-left img.profile {
-    height: 120px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     border:3px solid #0cf53e;
     position: fixed;
-    left: 100px;
-    top: 20px;
+    left: 250px;
+    top: 50px;
     
 
 }
@@ -88,27 +91,31 @@ font-size: 16px;
         position: fixed;
         top: 15px;
         right: 20px;
-        z-index: 9999;
+        z-index: 1001;
     }}
 .nav-menu{
     position: absolute;
-    top:0 ;
-    width: 150px;
+    top: 100%; /* تحت النافبار مباشرة */
+    width: 160px;
     right: 0;
-    height: 250px;
-    background-color: #0cf53e;
-    padding-top: 20px;
-    text-align: left;
-    transform: translateY(-100%);
+    height: auto;
+    background-color: #b7c8bb;
+    padding: 20px 0;
+    text-align: right;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(221, 18, 18, 0.15);
+    transform: translateY(-110%);
     transition: transform 0.3s ease-in-out;
-    z-index: 9998;
+    z-index: 1000;
+    display: none; /* مخفية افتراضيًا */
 }
 .nav-menu.active{
     display: block;
-    transform: translatex(0);
+    transform: translateY(0);
 }
 .nav-menu li{
     display: block;
+    margin: 15px;
     
 }
 .nav-menu a{
