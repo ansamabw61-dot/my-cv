@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar">
-<head>
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سيرتي الذاتية</title>
@@ -17,16 +17,23 @@
         <div class="header-left">
             <img src="mymages.jpg" alt="صورة شخصية" class="profile">
         </div>
-        <div class="header-right">
-            <nav>
-                <ul>
+                  <!--الهامبرغ-->
+            <nav class="navbar">
+                <button class="hamburger-icon"
+                id="hamburger-button" aria-controls="main-menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+                <ul class="nav-menu" id="main-menu">
                     <li><a href="#home">الصفحة الرئيسية</a></li>
                     <li><a href="#about">عني</a></li>
                     <li><a href="#projects">مشاريعي</a></li>
                     <li><a href="#contact">تواصل بي</a></li>
                 </ul>
-                
             </nav>
+        </div>
         <!-- ازرار الشبكات الاجتماعية--> 
             <div class="social-fixed">
                 <a href="https://www.facebook.com/mohammed.alsbry?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -65,7 +72,7 @@
     </section>
 
     <!-- المشاريع -->
-    <section class="projects-section">
+    <section id="projects">
         <h2>مشاريعي</h2>
         <p>فيما يلي بعض المشاريع التي أنشاتها اثناء رحلتي التعليمة لإضهار مهاراتي وافكاري</p>
             <img src="imag_project.png" alt="صورة مشروعي السابق" class="project-image">
@@ -105,12 +112,17 @@
         function scrollDown() {
             document.getElementById("about").scrollIntoView({ behavior: "smooth" });
         }
-        function scrollDown() {
-  window.scrollBy({
-    top: 600,
-    behavior: 'smooth'
-  });
-}
+    
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const navMenu = document.getElementById('main-menu');
+ hamburgerButton.addEventListener('click', () => {
+        
+        navMenu.classList.toggle('active');
+        hamburgerButton.classList.toggle('active');
+    });
+
+
+
     </script>
 </body>
 </html>
