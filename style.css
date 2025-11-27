@@ -64,7 +64,7 @@ font-size: 16px;
     object-fit: cover;
     border:3px solid #0cf53e;
     position: fixed;
-    left: 250px;
+    left: 50px;
     top: 50px;
     
 
@@ -100,8 +100,8 @@ font-size: 16px;
     right: 0;
     height: auto;
     background-color: #b7c8bb;
-    padding: 20px 0;
-    text-align: right;
+    padding: 10px 0;
+    text-align: left;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(221, 18, 18, 0.15);
     transform: translateY(-110%);
@@ -115,12 +115,15 @@ font-size: 16px;
 }
 .nav-menu li{
     display: block;
-    margin: 15px;
+    margin: 5px;
+    
     
 }
 .nav-menu a{
     color: #000;
     text-decoration: none;
+
+
 }
 .hamburger-icon.active span:nth-child(2){
     transform: translatex(8px) rotate(45deg);
@@ -128,35 +131,6 @@ font-size: 16px;
 .hamburger-icon.active span:nth-child(3){
     transform: translatex(-8px) rotate(-45deg);
 }
-/*
-.menu {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.menu-icon {
-  font-size: 30px;
-  cursor: pointer;
-  color: white;
-}
-
-.header-right nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.header-right nav ul li a {
-    text-decoration: none;
-    color: #f8fdfa;
-    font-weight: bold;
-}
-
-.header-right nav ul li a:hover {
-    color: #ffcc00;
-}
-  */  
 .social-fixed {
     position: fixed;       /* يبقى مثبت عند التمرير */
     left: 0;               /* الجانب الأيسر */
