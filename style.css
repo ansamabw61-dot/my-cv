@@ -64,8 +64,8 @@ font-size: 16px;
     object-fit: cover;
     border:3px solid #0cf53e;
     position: fixed;
-    left: 180px;
-    top: 40px;
+    left: 110px;
+    top: 35px;
     
 
 }
@@ -171,11 +171,14 @@ section {
 .home-section {
     text-align: center;
     background: #e0f7fa;
+    margin-bottom: 20px;
+    
 }
 
 .home-section h1 {
     margin-bottom: 20px;
     font-size: 2rem;
+
 }
 
 .btn {
