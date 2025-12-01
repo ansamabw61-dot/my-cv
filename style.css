@@ -31,6 +31,9 @@ header,nav,section,footer{
 }
 .navbar{
     position: relative; /* حتى تتموضع القائمة بالنسبة للنافبار */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 @media(max-width:600px){
 body{
@@ -47,10 +50,6 @@ font-size: 16px;
 }
 /* الهيدر */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px;
     background-color: #1909f5;
     color: #fff;
     position: sticky;
@@ -58,23 +57,24 @@ font-size: 16px;
     z-index: 1000;
 }
 
+.header-inner {
+    justify-content: space-between;
+    padding: 20px;
+}
+
 .header-left img.profile {
-    height: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     object-fit: cover;
     border:3px solid #0cf53e;
-    position: fixed;
-    left: 110px;
-    top: 35px;
-    
-
 }
 
 .hamburger-icon{
-    display: block;
-    
-
-    
+    display: block; /* يظهر على جميع المقاسات */
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 .hamburger-icon span{
     display: block;
@@ -84,29 +84,22 @@ font-size: 16px;
     margin: 5px 0;
     transition: all 0.3s;
 }
-@media(max-width:600px){
-    .hamburger-icon{
-        display: block;
-        cursor: pointer;
-        position: fixed;
-        top: 15px;
-        right: 20px;
-        z-index: 1001;
-    }}
+
 .nav-menu{
+    list-style: none;
     position: absolute;
-    top: 100%; /* تحت النافبار مباشرة */
-    width: 160px;
+    top: 100%; /* تحت زر الهمبرغر مباشرة */
     right: 0;
+    width: 180px;
     height: auto;
     background-color: #b7c8bb;
     padding: 10px 0;
-    text-align: left;
+    text-align: right;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(221, 18, 18, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transform: translateY(-110%);
     transition: transform 0.3s ease-in-out;
-    z-index: 1000;
+    z-index: 1001;
     display: none; /* مخفية افتراضيًا */
 }
 .nav-menu.active{
@@ -115,16 +108,16 @@ font-size: 16px;
 }
 .nav-menu li{
     display: block;
-    margin: 5px;
-    
-    
+    margin: 5px 0;
+    z-index: 1000;
 }
 .nav-menu a{
     color: #000;
     text-decoration: none;
-
-
+    display: block;
+    padding: 5px 15px;
 }
+
 .hamburger-icon.active span:nth-child(2){
     transform: translatex(8px) rotate(45deg);
 }
