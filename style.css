@@ -32,8 +32,9 @@ header,nav,section,footer{
 .navbar{
     position: relative; /* حتى تتموضع القائمة بالنسبة للنافبار */
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: column; /* زر الهمبرغر في الأعلى والقائمة تحته */
+    align-items: flex-end;
+    justify-content: center;
 }
 @media(max-width:600px){
 body{
@@ -59,7 +60,7 @@ font-size: 16px;
 
 .header-inner {
     justify-content: space-between;
-    padding: 20px;
+    padding: 5px;
 }
 
 .header-left img.profile {
@@ -87,24 +88,17 @@ font-size: 16px;
 
 .nav-menu{
     list-style: none;
-    position: absolute;
-    top: 100%; /* تحت زر الهمبرغر مباشرة */
-    right: 0;
     width: 180px;
-    height: auto;
     background-color: #b7c8bb;
     padding: 10px 0;
     text-align: right;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transform: translateY(-110%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1001;
+    margin-top: 8px; /* مسافة بسيطة تحت الأيقونة */
     display: none; /* مخفية افتراضيًا */
 }
 .nav-menu.active{
-    display: block;
-    transform: translateY(0);
+    display: block; /* تظهر وتدفع المحتوى للأسفل */
 }
 .nav-menu li{
     display: block;
@@ -127,7 +121,7 @@ font-size: 16px;
 .social-fixed {
     position: fixed;       /* يبقى مثبت عند التمرير */
     left: 0;               /* الجانب الأيسر */
-    top: 70%;              /* منتصف الصفحة عموديًا */
+    top: 90%;              /* منتصف الصفحة عموديًا */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column; /* ترتيب عمودي */
